@@ -42,6 +42,8 @@ package() {
   cp -r manpages/* $pkgdir/usr/share/man/
   install -d -m 755 $pkgdir/etc/bash_completion.d/
   install -p -m 644 kathara.bash-completion $pkgdir/etc/bash_completion.d/
+  install -d -m 755 $pkgdir/usr/lib/$pkgname/Resources
+  cp -r Resources/* $pkgdir/usr/lib/$pkgname/Resources/
   mkdir $pkgdir/usr/bin
   ln -sf /usr/lib/$pkgname/kathara "$pkgdir/usr/bin/$pkgname"
 }
